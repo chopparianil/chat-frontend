@@ -740,6 +740,8 @@ Chatbucket.controller("chatController",function($scope,$http,ChatService,$rootSc
 								console.log("In Controller");
 								$scope.addForum=function(newForum)
 								{
+									
+
 									var dataObj = {
 											category:$scope.category,
 											topic:$scope.topic,
@@ -747,6 +749,8 @@ Chatbucket.controller("chatController",function($scope,$http,ChatService,$rootSc
 											
 											
 							 		};
+									
+
 									console.log("title:"+dataObj);
 									 var res = $http.post('http://localhost:2020/Chatbucket/addForum',dataObj);
 									 $http.get("http://localhost:2020/Chatbucket/viewForums")
